@@ -13,11 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Zig
-      run: |
-        ZIG_VERSION=$(curl -s https://api.github.com/repos/ziglang/zig/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-        curl -L https://ziglang.org/download/${ZIG_VERSION}/zig-linux-x86_64-${ZIG_VERSION}.tar.xz | tar -xJ
-        sudo mv zig-linux-x86_64-${ZIG_VERSION}/zig /usr/local/bin/zig
-    - name: Build
-      run: zig build
+      - uses: actions/checkout@v2
+      - name: Set up Zig
+        run: |
+          ./.devcontainer/install_zig.sh
+      - name: Build
+        run: zig build
