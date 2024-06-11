@@ -1,0 +1,2 @@
+# ziggy
+Me learning zig
