@@ -5,7 +5,8 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "ziglang.vscode-zig"
+                "ziglang.vscode-zig",
+                "esbenp.prettier-vscode"
             ],
             "settings": {
                 "zig.zigPath": "/usr/local/bin/zig"
