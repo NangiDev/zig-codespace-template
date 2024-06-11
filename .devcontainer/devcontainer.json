@@ -1,8 +1,7 @@
 {
     "name": "Ziggy",
-    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu", // Base image
-    "postCreateCommand": "curl -L https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz | tar -xJf - --strip-components=1 -C /usr/local/bin/ zig-linux-x86_64-0.13.0/zig",
-    
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+    "postCreateCommand": "chmod +x .devcontainer/install_zig.sh && /bin/bash .devcontainer/install_zig.sh",
     "customizations": {
         "vscode": {
             "extensions": [
