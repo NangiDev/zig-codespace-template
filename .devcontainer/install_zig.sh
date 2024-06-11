@@ -10,13 +10,10 @@ ZIG_DOWNLOAD_URL="https://ziglang.org/download/${ZIG_VERSION}/zig-linux-x86_64-$
 TEMP_DIR=$(mktemp -d)
 
 # Download and extract Zig
-curl -L $ZIG_DOWNLOAD_URL | tar -xJ -C $TEMP_DIR
+curl -L $ZIG_DOWNLOAD_URL | tar -xJ -C $TEMP_DIR --strip-components=1
 
 # Move the Zig binary to /usr/local/bin
-sudo mv $TEMP_DIR/zig-linux-x86_64-$ZIG_VERSION/zig /usr/local/bin/zig
-
-# Clean up the temporary directory
-rm -rf $TEMP_DIR
+sudo ln -s $TEMP_DIR/zig /usr/local/bin/zig
 
 # Verify installation
 zig version
