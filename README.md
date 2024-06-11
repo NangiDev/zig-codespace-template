@@ -18,7 +18,7 @@
 You can use `zig build` to build the project:
 
 ```sh
-zig build .
+zig build
 ```
 
 ## Contributing
@@ -38,5 +38,5 @@ Ensure your code adheres to consistent style guidelines:
 You can use `zig fmt` to format your Zig code:
 
 ```sh
-zig fmt .
+zig fmt
 ```
