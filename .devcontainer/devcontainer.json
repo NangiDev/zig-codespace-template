@@ -1,7 +1,7 @@
 {
     "name": "Ziggy",
     "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
-    "postCreateCommand": "chmod +x .devcontainer/install_zig.sh && /bin/bash .devcontainer/install_zig.sh && git config --local include.path ../.gitconfig",
+    "postCreateCommand": "chmod +x .devcontainer/install_*.sh && /bin/bash .devcontainer/install_zig.sh && /bin/bash .devcontainer/install_zls.sh && git config --local include.path ../.gitconfig",
     "customizations": {
         "vscode": {
             "extensions": [
