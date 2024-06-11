@@ -1,0 +1,13 @@
+[user]
+    name = Your Name
+    email = your.email@example.com
+[core]
+    editor = code --wait
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    di = diff
+    lg = log --oneline --graph --all
+    alias = config --get-regexp ^alias
