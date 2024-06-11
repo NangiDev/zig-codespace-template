@@ -1,0 +1,15 @@
+{
+    "name": "Ziggy",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu", // Base image
+    "postCreateCommand": "curl -L https://ziglang.org/download/0.10.1/zig-linux-x86_64-0.10.1.tar.xz | tar xJ && sudo mv zig-linux-x86_64-0.10.1/zig /usr/local/bin/",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ziglang.vscode-zig"
+            ],
+            "settings": {
+                "zig.zigPath": "/usr/local/bin/zig"
+            }
+        }
+    }
+}
